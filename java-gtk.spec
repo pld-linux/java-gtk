@@ -11,10 +11,9 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.4/%{pname}-%{version}
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
-BuildRequires:	gcc-java >= 3.3.2
+BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.4
-BuildRequires:	libgcj-devel >= 3.3.2
-BuildRequires:	slocate
+BuildRequires:	libgcj-devel >= 5:3.3.2
 Obsoletes:	libgtk-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -68,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_datadir}/java
+%{_datadir}/java/*.jar
 %{_datadir}/%{pname}
 %{_pkgconfigdir}/*.pc
