@@ -1,30 +1,47 @@
-Summary:	Java-GTK is a preliminary version of Java wrappers for GTK
-Summary(pl):	Wstêpna wersja javowych wrapperów do GTK
+%define	pname	libgtk-java
+Summary:	Java interface for the GTK+
+Summary(pl):	Wrapper Java dla GTK+
 Name:		java-gtk
-Version:	0.5.0
+Version:	2.3.5
 Release:	1
-License:	GPL
-Group:		X11/Libraries
-Source0:	http://dl.sourceforge.net/java-gnome/%{name}-%{version}.tar.gz
-# Source0-md5:	bd97ee300dca6393b8b6f641ae7cdf87
+License:	LGPL
+Group:		Libraries
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.3/%{pname}-%{version}.tar.bz2
+# Source0-md5:	b63ea961b84b6cca0e2e19138158f48d
 URL:		http://java-gnome.sourceforge.net/
-Requires:	gtk+ >= 1.2.0
+BuildRequires:	autoconf
+BuildRequires:	gcc-java >= 3.3.2
+BuildRequires:	gtk+2-devel >= 2.3.2
+BuildRequires:	libgcj-devel >= 3.3.2
+BuildRequires:	slocate
+Obsoletes:	libgtk-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a very preliminary version of Java wrappers for GTK and should
-be deamed ALPHA although it might work for you.
+Java interface for the GTK+.
 
 %description -l pl
-To bardzo wstêpna wersja javowych wrapperów do GTK - jest to wersja
-ALFA, nawet je¶li mo¿e dzia³aæ.
+Wrapper Java dla GTK+.
+
+%package devel
+Summary:	Header files for java-gtk library
+Summary(pl):	Pliki nag³ówkowe biblioteki java-gtk
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+Obsoletes:	libgtk-java-devel
+
+%description devel
+Header files for java-gtk library.
+
+%description devel -l pl
+Pliki nag³ówkowe biblioteki java-gtk.
 
 %prep
-%setup -q
+%setup -q -n %{pname}-%{version}
 
 %build
-%configure \
-	--with-gtk-only
+%{__autoconf}
+%configure
 %{__make}
 
 %install
@@ -36,9 +53,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS README NEWS TODO THANKS doc
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%doc AUTHORS NEWS README THANKS TODO
+%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+
+%files devel
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_datadir}/java-gtk
+%{_datadir}/java-gnome
