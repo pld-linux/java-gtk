@@ -11,6 +11,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.4/%{pname}-%{version}
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	libgcj-devel >= 5:3.3.2
