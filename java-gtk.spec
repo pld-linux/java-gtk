@@ -1,33 +1,45 @@
-%define ver	0.5.0
-%define rel	2
+Summary:	Java-GTK is a preliminary version of Java wrappers for GTK
+Name:		java-gtk
+Version:	0.5.0
+Release:	1
+Requires:	gtk+ >= 1.2.0
+License:	GPL
+Group:		X11/Libraries
+Group(de):	X11/Libraries
+Group(pl):	X11/Biblioteki
+Source0:	ftp://download.sourceforge.net/pub/sourceforge/java-gnome/%{name}-%{version}.tar.gz
+URL:		http://java-gnome.sourceforge.net/
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Summary: Java-GTK is a preliminary version of Java wrappers for GTK.
-Name: java-gtk
-Version: %{ver}
-Release: %{rel}
-Requires: gtk+ >= 1.2.0
-Copyright: GPL
-Group: ""
-Source: java-gtk-%{ver}.tar.gz
-URL: http://java-gnome.sourceforge.net/
-Packager: Jean van Wyk <jeanvanwyk@iname.com>
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
-This is a very preliminary version of Java wrappers for GTK and should be 
-deamed ALPHA although it might work for you.
+This is a very preliminary version of Java wrappers for GTK and should
+be deamed ALPHA although it might work for you.
 
 %prep
-%setup
+%setup -q
 
 %build
-./configure --prefix %{_prefix} --with-gtk-only
-make
+%configure \
+	--with-gtk-only
+%{__make}
 
 %install
-make install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+gzip -9nf AUTHORS README NEWS TODO THANKS doc
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc AUTHORS COPYING INSTALL README NEWS TODO THANKS doc
-%{_prefix}/lib/libGTKJava.so.0.5.0
-%{_prefix}/lib/libGTKJava.so
-%{_prefix}/share/java-gtk/
+%defattr(644,root,root,755)
+%doc *.gz
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_datadir}/java-gtk
