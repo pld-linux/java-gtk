@@ -1,4 +1,4 @@
-%define	pname	libgtk-java
+%define		pname	libgtk-java
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Java dla GTK+
 Name:		java-gtk
@@ -45,7 +45,7 @@ Pliki nag³ówkowe biblioteki java-gtk.
 %{__aclocal} -I macros
 %{__autoconf}
 %configure \
-    GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
+	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
 
 %{__make}
 
