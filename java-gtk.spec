@@ -43,7 +43,7 @@ Pliki nag³ówkowe biblioteki java-gtk.
 %{__aclocal} -I macros
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
+	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar`
 
 %{__make}
 
