@@ -8,6 +8,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.3/%{pname}-%{version}.tar.bz2
 # Source0-md5:	b63ea961b84b6cca0e2e19138158f48d
+Patch0:		%{name}-gcjjar.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	gcc-java >= 3.3.2
@@ -38,10 +39,12 @@ Pliki nag³ówkowe biblioteki java-gtk.
 
 %prep
 %setup -q -n %{pname}-%{version}
+%patch0 -p1
 
 %build
 %{__autoconf}
-%configure
+%configure \
+	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
 %{__make}
 
 %install
