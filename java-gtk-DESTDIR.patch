@@ -1,0 +1,65 @@
+diff -urN aa/libgtk-java-2.4.3/Makefile.in libgtk-java-2.4.3/Makefile.in
+--- aa/libgtk-java-2.4.3/Makefile.in	2004-07-20 15:17:58.000000000 +0200
++++ libgtk-java-2.4.3/Makefile.in	2004-07-21 14:35:00.754873160 +0200
+@@ -36,38 +36,38 @@
+ 
+ # Install core gtk java libraries and required libraries
+ install:  @GCJ_INSTALL_TARGETS@
+-	-$(INSTALL) -d $(datadir)/java/
+-	-$(INSTALL) -d $(datadir)/doc/libgtk$(apiversion)-java/
+-	-$(INSTALL) -d $(libdir)/
+-	$(INSTALL) -s -m644 lib/libgtkjava$(gtkapiversion).so.$(gtkversion) $(libdir)/
+-	$(INSTALL) -m644 lib/gtk$(gtkapiversion)-$(gtkversion).jar $(datadir)/java/
+-	ln -s -f libgtkjava$(gtkapiversion).so.$(gtkversion) $(libdir)/libgtkjava$(gtkapiversion).so
+-	ln -s -f gtk$(gtkapiversion)-$(gtkversion).jar $(datadir)/java/gtk$(gtkapiversion).jar
+-	-for f in $(DOCUMENTS); do $(INSTALL) -m644 $$f $(datadir)/doc/libgtk$(gtkapiversion)-java || exit 1; done;
+-	-$(INSTALL) -d $(libdir)/pkgconfig/
+-	$(INSTALL) -m644 gtk2-java.pc $(libdir)/pkgconfig/
+-	-$(INSTALL) -d $(datadir)/libgtk-java/macros/
+-	$(INSTALL) -m644 macros/*.m4 $(datadir)/libgtk-java/macros/
++	-$(INSTALL) -d $(DESTDIR)$(datadir)/java/
++	-$(INSTALL) -d $(DESTDIR)$(datadir)/doc/libgtk$(apiversion)-java/
++	-$(INSTALL) -d $(DESTDIR)$(libdir)/
++	$(INSTALL) -s -m644 lib/libgtkjava$(gtkapiversion).so.$(gtkversion) $(DESTDIR)$(libdir)/
++	$(INSTALL) -m644 lib/gtk$(gtkapiversion)-$(gtkversion).jar $(DESTDIR)$(datadir)/java/
++	ln -s -f libgtkjava$(gtkapiversion).so.$(gtkversion) $(DESTDIR)$(libdir)/libgtkjava$(gtkapiversion).so
++	ln -s -f gtk$(gtkapiversion)-$(gtkversion).jar $(DESTDIR)$(datadir)/java/gtk$(gtkapiversion).jar
++	-for f in $(DOCUMENTS); do $(INSTALL) -m644 $$f $(DESTDIR)$(datadir)/doc/libgtk$(gtkapiversion)-java || exit 1; done;
++	-$(INSTALL) -d $(DESTDIR)$(libdir)/pkgconfig/
++	$(INSTALL) -m644 gtk2-java.pc $(DESTDIR)$(libdir)/pkgconfig/
++	-$(INSTALL) -d $(DESTDIR)$(datadir)/libgtk-java/macros/
++	$(INSTALL) -m644 macros/*.m4 $(DESTDIR)$(datadir)/libgtk-java/macros/
+ 	$(MAKE) -C doc install
+ 
+ # install native (gcj compiled) libraries
+ native_install:
+-	-$(INSTALL) -d $(libdir)/
+-	$(INSTALL) -s -m644 lib/libgtkjar$(gtkapiversion).so.$(gtkversion) $(libdir)/
+-	@ln -s -f libgtkjar$(gtkapiversion).so.$(gtkversion) $(libdir)/libgtkjar$(gtkapiversion).so
++	-$(INSTALL) -d $(DESTDIR)$(libdir)/
++	$(INSTALL) -s -m644 lib/libgtkjar$(gtkapiversion).so.$(gtkversion) $(DESTDIR)$(libdir)/
++	@ln -s -f libgtkjar$(gtkapiversion).so.$(gtkversion) $(DESTDIR)$(libdir)/libgtkjar$(gtkapiversion).so
+ 
+ # Uninstall targets
+ uninstall: @GCJ_UNINSTALL_TARGETS@
+-	rm -f $(libdir)/libgtkjava$(gtkapiversion).so.$(gtkversion)
+-	rm -f $(libdir)/libgtkjava$(gtkapiversion).so
+-	rm -f $(datadir)/java-gnome/gtk$(gtkapiversion)-$(gtkversion).jar
+-	rm -f $(datadir)/java-gnome/gtk$(gtkapiversion).jar
+-	rm -rf $(datadir)/java-gnome
+-	rm -rf $(datadir)/doc/java-gnome-$(gtkapiversion)
++	rm -f $(DESTDIR)$(libdir)/libgtkjava$(gtkapiversion).so.$(gtkversion)
++	rm -f $(DESTDIR)$(libdir)/libgtkjava$(gtkapiversion).so
++	rm -f $(DESTDIR)$(datadir)/java-gnome/gtk$(gtkapiversion)-$(gtkversion).jar
++	rm -f $(DESTDIR)$(datadir)/java-gnome/gtk$(gtkapiversion).jar
++	rm -rf $(DESTDIR)$(datadir)/java-gnome
++	rm -rf $(DESTDIR)$(datadir)/doc/java-gnome-$(gtkapiversion)
+ 
+ native_uninstall:
+-	rm -f $(libdir)/libgtkjar$(gtkapiversion).so.$(gtkversion)
+-	rm -f $(libdir)/libgtkjar$(gtkapiversion).so
++	rm -f $(DESTDIR)$(libdir)/libgtkjar$(gtkapiversion).so.$(gtkversion)
++	rm -f $(DESTDIR)$(libdir)/libgtkjar$(gtkapiversion).so
+ 
+ .PHONY: all distro install native_install uninstall native_uninstall
+ 
