@@ -2,16 +2,16 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Java dla GTK+
 Name:		java-gtk
-Version:	2.4.0
+Version:	2.4.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.4/%{pname}-%{version}.tar.bz2
-# Source0-md5:	2a6e2020fa2bec07c86d7591844e5a70
+# Source0-md5:	91c53826db303c2e9a3a69827bbeaa32
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	gcc-java >= 3.3.2
-BuildRequires:	gtk+2-devel >= 2:2.4.0
+BuildRequires:	gtk+2-devel >= 2:2.4.3
 BuildRequires:	libgcj-devel >= 3.3.2
 BuildRequires:	slocate
 Obsoletes:	libgtk-java
