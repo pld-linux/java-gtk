@@ -2,12 +2,12 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Java dla GTK+
 Name:		java-gtk
-Version:	2.4.7.1
+Version:	2.4.7.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.4/%{pname}-%{version}.tar.bz2
-# Source0-md5:	8f636dc2aed26182247ea863a7ee47b0
+# Source0-md5:	a91852eb5a0ff7b5487f55a17f2eb13b
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
