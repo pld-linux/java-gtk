@@ -10,8 +10,6 @@ URL:		http://java-gnome.sourceforge.net/
 Requires:	gtk+ >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 This is a very preliminary version of Java wrappers for GTK and should
