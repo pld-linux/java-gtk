@@ -6,7 +6,7 @@ Version:	2.6.2
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.6/%{pname}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.6/%{pname}-%{version}.tar.bz2
 # Source0-md5:	17d558597494261ff92b155a10a27d20
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
