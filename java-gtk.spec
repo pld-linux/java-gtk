@@ -40,7 +40,6 @@ Pliki nag³ówkowe biblioteki java-gtk.
 Summary:        Reference documentation and examples for java-gtk
 Summary(pl):    Szczegó³owa dokumentacja i przyk³ady dla java-gtk
 Group:          Documentation
-Requires:       devhelp
 
 %description doc
 Reference documentation and examples for java-gtk.
