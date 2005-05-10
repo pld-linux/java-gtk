@@ -67,7 +67,9 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 mv -f $RPM_BUILD_ROOT%{_docdir}/%{pname}-%{version}/examples \
         $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-	
+
+rm -f $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/*.in
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
