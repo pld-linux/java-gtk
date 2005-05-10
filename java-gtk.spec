@@ -54,7 +54,8 @@ Szczegó³owa dokumentacja i przyk³ady dla java-gtk.
 %{__aclocal} -I macros
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar`
+	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
+	--without-javadocs
 
 %{__make}
 
