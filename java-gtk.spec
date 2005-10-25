@@ -32,6 +32,8 @@ Summary:	Header files for java-gtk library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-gtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk+2-devel >= 2:2.8.0
+Requires:	java-cairo-devel >= 1.0.0
 Obsoletes:	libgtk-java-devel
 
 %description devel
