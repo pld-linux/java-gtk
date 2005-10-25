@@ -2,20 +2,24 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Java dla GTK+
 Name:		java-gtk
-Version:	2.6.2
+Version:	2.8.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.6/%{pname}-%{version}.tar.bz2
-# Source0-md5:	17d558597494261ff92b155a10a27d20
+Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
+# Source0-md5:	b63332bd156f5a5d5b6344dd8ed052a7
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	gtk+2-devel >= 2:2.6.0
+BuildRequires:	gtk+2-devel >= 2:2.8.0
+BuildRequires:	java-cairo-devel >= 1.0.0
+BuildRequires:	libtool
 Obsoletes:	libgtk-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		macros  %{_datadir}/glib-java/macros
 
 %description
 Java interface for the GTK+.
@@ -51,7 +55,9 @@ Szczegó³owa dokumentacja i przyk³ady dla java-gtk.
 %setup -q -n %{pname}-%{version}
 
 %build
-%{__aclocal} -I macros
+%{__libtoolize}
+%{__aclocal} -I macros -I %{macros}
+%{__automake}
 %{__autoconf}
 %configure \
 	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
@@ -80,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README THANKS TODO
-%attr(755,root,root) %{_libdir}/libgtk*-2.6.so
+%attr(755,root,root) %{_libdir}/libgtk*-2.8.so
 
 %files devel
 %defattr(644,root,root,755)
