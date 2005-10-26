@@ -1,6 +1,6 @@
 %define		pname	libgtk-java
 Summary:	Java interface for the GTK+
-Summary(pl):	Wrapper Java dla GTK+
+Summary(pl):	Wrapper Javy dla GTK+
 Name:		java-gtk
 Version:	2.8.0
 Release:	1
@@ -25,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Java interface for the GTK+.
 
 %description -l pl
-Wrapper Java dla GTK+.
+Wrapper Javy dla GTK+.
 
 %package devel
 Summary:	Header files for java-gtk library
