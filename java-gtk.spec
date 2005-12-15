@@ -2,12 +2,12 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Javy dla GTK+
 Name:		java-gtk
-Version:	2.8.1
+Version:	2.8.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
-# Source0-md5:	f96f147fa2c75e810736c2a80cdcd4bd
+# Source0-md5:	1856ed8461f27a6234f72bb6fb37dd42
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
