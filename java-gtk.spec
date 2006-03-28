@@ -2,19 +2,19 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Javy dla GTK+
 Name:		java-gtk
-Version:	2.8.2
+Version:	2.8.4
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
-# Source0-md5:	1856ed8461f27a6234f72bb6fb37dd42
+# Source0-md5:	6fc73a343879ba3a13b9a827a67400fb
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	gtk+2-devel >= 2:2.8.0
-BuildRequires:	java-cairo-devel >= 1.0.1
+BuildRequires:	java-cairo-devel >= 1.0.3
 BuildRequires:	libtool
 Obsoletes:	libgtk-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,7 +33,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki java-gtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.8.0
-Requires:	java-cairo-devel >= 1.0.1
+Requires:	java-cairo-devel >= 1.0.3
 Obsoletes:	libgtk-java-devel
 
 %description devel
@@ -62,7 +62,8 @@ Szczegó³owa dokumentacja i przyk³ady dla java-gtk.
 %{__automake}
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
+	GCJFLAGS="%{rpmcflags}" \
+	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 
 %{__make}
