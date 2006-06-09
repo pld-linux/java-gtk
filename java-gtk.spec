@@ -43,9 +43,9 @@ Header files for java-gtk library.
 Pliki nag³ówkowe biblioteki java-gtk.
 
 %package doc
-Summary:        Reference documentation and examples for java-gtk
-Summary(pl):    Szczegó³owa dokumentacja i przyk³ady dla java-gtk
-Group:          Documentation
+Summary:	Reference documentation and examples for java-gtk
+Summary(pl):	Szczegó³owa dokumentacja i przyk³ady dla java-gtk
+Group:		Documentation
 
 %description doc
 Reference documentation and examples for java-gtk.
