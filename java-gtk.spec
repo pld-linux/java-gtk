@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgtkjava.so
 %attr(755,root,root) %{_libdir}/libgtkjni.so
 %{_datadir}/%{pname}
-%{_includedir}/%{pname}/*.h
+%{_includedir}/%{pname}
 %{_javadir}/*.jar
 %{_libdir}/*.la
 %{_pkgconfigdir}/*.pc
