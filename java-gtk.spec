@@ -2,18 +2,18 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Javy dla GTK+
 Name:		java-gtk
-Version:	2.9.1
+Version:	2.9.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.9/%{pname}-%{version}.tar.gz
-# Source0-md5:	897d0528374f88e630cc328a8db44c05
+# Source0-md5:	cb3a868e72b7a953cd0a33f60bd47913
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	gtk+2-devel >= 2:2.10.1
+BuildRequires:	gtk+2-devel >= 2:2.10.2
 BuildRequires:	java-cairo-devel >= 1.0.5
 BuildRequires:	libtool
 Obsoletes:	libgtk-java
@@ -32,7 +32,7 @@ Summary:	Header files for java-gtk library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-gtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk+2-devel >= 2:2.10.1
+Requires:	gtk+2-devel >= 2:2.10.2
 Requires:	java-cairo-devel >= 1.0.5
 Obsoletes:	libgtk-java-devel
 
