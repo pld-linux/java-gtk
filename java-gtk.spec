@@ -2,12 +2,12 @@
 Summary:	Java interface for the GTK+
 Summary(pl):	Wrapper Javy dla GTK+
 Name:		java-gtk
-Version:	2.10.0
+Version:	2.10.1
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.10/%{pname}-%{version}.tar.gz
-# Source0-md5:	5c7b6b061aa9f7fd37064024031862b4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.10/%{pname}-%{version}.tar.bz2
+# Source0-md5:	6e408287215eaa41788d3d275f529883
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -63,7 +63,6 @@ Szczegó³owa dokumentacja i przyk³ady dla java-gtk.
 %{__autoconf}
 %configure \
 	GCJFLAGS="%{rpmcflags}" \
-	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 
 %{__make}
