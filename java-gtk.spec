@@ -1,6 +1,6 @@
 %define	pname	libgtk-java
 Summary:	Java interface for the GTK+
-Summary(pl):	Wrapper Java dla GTK+
+Summary(pl.UTF-8):   Wrapper Java dla GTK+
 Name:		java-gtk
 Version:	2.3.7
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java interface for the GTK+.
 
-%description -l pl
+%description -l pl.UTF-8
 Wrapper Java dla GTK+.
 
 %package devel
 Summary:	Header files for java-gtk library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki java-gtk
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki java-gtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Obsoletes:	libgtk-java-devel
@@ -33,8 +33,8 @@ Obsoletes:	libgtk-java-devel
 %description devel
 Header files for java-gtk library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki java-gtk.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki java-gtk.
 
 %prep
 %setup -q -n %{pname}-%{version}
