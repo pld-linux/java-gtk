@@ -1,6 +1,6 @@
 %define		pname	libgtk-java
 Summary:	Java interface for the GTK+
-Summary(pl.UTF-8):   Wrapper Javy dla GTK+
+Summary(pl.UTF-8):	Wrapper Javy dla GTK+
 Name:		java-gtk
 Version:	2.10.2
 Release:	1
@@ -29,7 +29,7 @@ Wrapper Javy dla GTK+.
 
 %package devel
 Summary:	Header files for java-gtk library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki java-gtk
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki java-gtk
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.10.7
@@ -44,7 +44,7 @@ Pliki nagłówkowe biblioteki java-gtk.
 
 %package doc
 Summary:	Reference documentation and examples for java-gtk
-Summary(pl.UTF-8):   Szczegółowa dokumentacja i przykłady dla java-gtk
+Summary(pl.UTF-8):	Szczegółowa dokumentacja i przykłady dla java-gtk
 Group:		Documentation
 
 %description doc
