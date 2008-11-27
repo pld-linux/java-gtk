@@ -11,12 +11,13 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.10/%{pname}-%{vers
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	gnome-doc-tools
 BuildRequires:	gtk+2-devel >= 2:2.10.7
 BuildRequires:	java-cairo-devel >= 1.0.8
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 Obsoletes:	libgtk-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
