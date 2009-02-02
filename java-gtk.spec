@@ -5,7 +5,7 @@ Name:		java-gtk
 Version:	2.10.2
 Release:	3
 License:	LGPL
-Group:		Libraries
+Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.10/%{pname}-%{version}.tar.bz2
 # Source0-md5:	b953f9e106727028ab6ca025357212f0
 URL:		http://java-gnome.sourceforge.net/
