@@ -3,7 +3,7 @@ Summary:	Java interface for the GTK+
 Summary(pl.UTF-8):	Wrapper Javy dla GTK+
 Name:		java-gtk
 Version:	2.10.2
-Release:	5
+Release:	6
 License:	LGPL
 Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgtk-java/2.10/%{pname}-%{version}.tar.bz2
